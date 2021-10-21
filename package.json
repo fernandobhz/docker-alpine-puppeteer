@@ -2,9 +2,12 @@
   "name": "docker-alpine-puppeteer",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.mjs",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:build": "docker build . -t fernandobhz/docker-alpine-puppeteer",
+    "docker:push": "docker push fernandobhz/docker-alpine-puppeteer"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/fernandobhz/docker-alpine-puppeteer/issues"
   },
-  "homepage": "https://github.com/fernandobhz/docker-alpine-puppeteer#readme"
+  "homepage": "https://github.com/fernandobhz/docker-alpine-puppeteer#readme",
+  "dependencies": {
+    "mustache": "^4.2.0",
+    "puppeteer": "^10.4.0"
+  }
 }
